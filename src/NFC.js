@@ -30,16 +30,16 @@ class NFC extends EventEmitter {
 				warn: function () {
 				},
 				error: function () {
-				},
+				}
 			};
 		}
 
 		this.pcsc.on('reader', (reader) => {
 
-			this.logger.debug('new reader detected', reader.name);
+			this.logger.info('New reader detected', reader.name);
 
 			// create special object for ARC122U reader with commands specific to this reader
-			if (reader.name.toLowerCase().indexOf('acr122') !== -1) {
+			if (reader.name == process.env.READER_NAME) {
 
 				const device = new ACR122Reader(reader, this.logger);
 
@@ -57,7 +57,7 @@ class NFC extends EventEmitter {
 
 		this.pcsc.on('error', (err) => {
 
-			this.logger.error('PCSC error', err.message);
+			this.logger.info('PCSC error', err.message);
 
 			this.emit('error', err);
 
@@ -65,12 +65,10 @@ class NFC extends EventEmitter {
 
 	}
 
-	get readers() {
-		return this.pcsc.readers;
-	}
-
 	close() {
+
 		this.pcsc.close();
+
 	}
 
 }
