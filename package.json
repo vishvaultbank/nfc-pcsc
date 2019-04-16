@@ -1,0 +1,40 @@
+{
+  "name": "nfc-pcsc",
+  "version": "0.7.1",
+  "description": "Easy reading and writing NFC tags and cards",
+  "keywords": [
+    "arc122",
+    "card",
+    "desfire",
+    "mifare",
+    "ndef",
+    "nfc",
+    "pcsc",
+    "pcsclite",
+    "tag",
+    "ultralight"
+  ],
+  "homepage": "https://github.com/pokusew/nfc-pcsc#readme",
+  "bugs": {
+    "url": "https://github.com/pokusew/nfc-pcsc/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pokusew/nfc-pcsc.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Martin Endler",
+    "url": "https://github.com/pokusew"
+  },
+  "contributors": [
+    {
+      "name": "foxxyz",
+      "url": "https://github.com/foxxyz"
+    }
+  ],
+  "main": "dist/index.js",
+  "dependencies": {
+    "@pokusew/pcsclite": "^0.5.1"
+  }
+}
