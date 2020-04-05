@@ -1,0 +1,17 @@
+{
+  "summary": {
+    "title": "ABCD",
+    "owner": "AS",
+    "description": "AAS"
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "title": "ADDD",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0
+      }
+    ]
+  }
+}
